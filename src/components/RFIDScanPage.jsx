@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/image/21-removebg-preview.png";
 
 const dummyData = {
-  1234567890: {
-    nik: "EMP001",
-    nama: "Budi Santoso",
+  "0525147889": {
+    nik: "018119",
+    nama: "Donit Ganteng",
     foto: "https://randomuser.me/api/portraits/men/75.jpg",
   },
   "0987654321": {
@@ -23,7 +23,6 @@ export default function RFIDScanPage() {
     const handleKeyPress = (e) => {
       if (e.key === "Enter") {
         const hasilScan = buffer.trim();
-        console.log();
         if (dummyData[hasilScan]) {
           setDataKaryawan(dummyData[hasilScan]);
           setLastScanTime(new Date());
